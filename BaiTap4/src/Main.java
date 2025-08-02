@@ -21,9 +21,9 @@ public class Main {
             System.out.print("Diem KTHP: ");
             double kthp = sc.nextDouble();
             System.out.print("So tiet nghi: ");
-            int rest = sc.nextInt();
+            int Vang = sc.nextInt();
             sc.nextLine();
-            s[i] = new Student(name, born, address, tx1, tx2, kthp, rest);
+            s[i] = new Student(name, born, address, tx1, tx2, kthp, Vang);
         }
     }
     public static void theoTuoi() {
@@ -68,7 +68,7 @@ public class Main {
         }
     }
     public static void menu() {
-        int choose;
+        int chon;
 
         do {
             System.out.println("___________MENU__________");
@@ -79,24 +79,24 @@ public class Main {
             System.out.println("5. Sap xep sinh vien theo So tiet nghi");
             System.out.println("6. Xoa sinh vien khoi danh sach");
             System.out.print("Chon thao tac(0 to Quit): ");
-            choose = sc.nextInt();
-            if (choose == 1) addStudent();
-            if (choose == 2) fixStudent();
-            if (choose == 3) {
+            chon = sc.nextInt();
+            if (chon == 1) addStudent();
+            if (chon == 2) fixStudent();
+            if (chon == 3) {
                 theoTuoi();
                 inDanhSach();
             }
-            if (choose == 4) {
+            if (chon == 4) {
                 theoGPA();
                 inDanhSach();
             }
-            if (choose == 5) {
+            if (chon == 5) {
                 theoSoTietNghi();
                 inDanhSach();
             }
-            if (choose == 6) deleteStudent();
+            if (chon == 6) deleteStudent();
 
-        } while (choose > 0);
+        } while (chon > 0);
     }
     public static void addStudent() {
         sc.nextLine();
